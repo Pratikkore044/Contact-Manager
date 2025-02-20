@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Contact Manager</title>
+    
+    <!-- Inline CSS -->
+    <style>
+        body {
+            font-family: "IBM Plex Sans", serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            justify-content: space-between;
+        }
+
+        header {
+            background-color: #7B2CBF;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex: 1;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 48px;
+            color: #7B2CBF;
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        a {
+            background-color: #7B2CBF;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #6B21A8;
+        }
+
+        footer {
+            background-color: #7B2CBF;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            font-size: 14px;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer-content a {
+            color: #f5f5f5;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .footer-content a:hover {
+            text-decoration: underline;
+        }
+
+        /* GIF styling */
+        .welcome-gif {
+            width: 300px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        Welcome to Contact Manager
+    </header>
+
+    <main>
+        <img src="https://cdn.pixabay.com/animation/2024/01/18/06/03/06-03-15-926_512.gif" alt="Welcome GIF" class="welcome-gif">
+        <h1>Manage Your Contacts Easily!</h1>
+        <p>Start organizing your contacts today.</p>
+        <a href="{% url 'signup' %}">Get Started</a>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>© 2024 ContactManager. All rights reserved.</p>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+        </div>
+    </footer>
+
+</body>
+
+</html>

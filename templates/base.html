@@ -1,0 +1,30 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>{% block title %} Contact Manager - Powered by Django {% endblock %}</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="{% static 'assets/css/styles.css' %}">
+	<script src="{% static 'assets/js/tailwind.cdn.js' %}"></script>
+</head>
+
+<body class="relative flex flex-col items-center min-h-screen bg-zinc-100">
+	{% include 'navbar.html' %}
+	<main class="mt-5 flex flex-1 flex-col w-3/4">
+		{% block content %}{% endblock %}
+		<div class="mx-auto mt-3">
+			{% include 'messages.html' %}
+		</div>
+	</main>
+	{% include 'footer.html' %}
+
+	<!-- EXTRA JS -->
+	{% block js %}{% endblock %}
+</body>
+
+</html>
